@@ -1,20 +1,20 @@
 def reverse_each_word(str)
-  arr = str.split(' ')
-  new_arr = []
-  arr.each do |i|
-    new_arr << i.reverse
+  arr = str.split(" ")
+  arr_1 = []
+  arr.each do |var|
+    arr_1 << var.reverse
   end
-  ele = new_arr.join(' ')
-  ele
+    return arr_1.join(" ")
 end
 
-def reverse_each_word(str)
-  arr = str.split(' ')
-  new_arr = []
-  arr.collect do |i|
-    new_arr << i.reverse
-  end
-  ele = new_arr.join(' ')
-  ele
+
+def uses collect(array)
+  
+  
 end
 
+  it 'uses collect' do
+    expect_any_instance_of(Array).to receive(:collect).and_call_original
+    reverse_each_word("Verifying that collect is being called.")
+  end
+end
